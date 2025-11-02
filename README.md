@@ -68,16 +68,16 @@ Includes preflight (tokens vs columns), token filters, dry-run mode, per-row sub
 
 ## Quick start
 ```bash
-python Generador_v2.py               # uses default paths (script directory)
-python Generador_v2.py data.xlsx     # specify input data
-python Generador_v2.py data.xlsx output/ templates/
+python office-template-batch-pdf.py               # uses default paths (script directory)
+python office-template-batch-pdf.py data.xlsx     # specify input data
+python office-template-batch-pdf.py data.xlsx output/ templates/
 ```
 
 ---
 
 ## CLI Options
 ```bash
-python Generador_v2.py --help
+python office-template-batch-pdf.py --help
 ```
 
 | Option | Description |
@@ -99,13 +99,13 @@ python Generador_v2.py --help
 ## Examples
 ```bash
 # Simulate replacements only
-python Generador_v2.py --dry-run --verbose
+python office-template-batch-pdf.py --dry-run --verbose
 
 # Process rows 0..49 where Course == 'B'
-python Generador_v2.py data.xlsx output/ templates/ --from 0 --to 49 --where "Course == 'B'"
+python office-template-batch-pdf.py data.xlsx output/ templates/ --from 0 --to 49 --where "Course == 'B'"
 
 # Force LibreOffice and custom output name pattern
-python Generador_v2.py --engine libreoffice --pattern "{index:04d}_{Company}.pdf"
+python office-template-batch-pdf.py --engine libreoffice --pattern "{index:04d}_{Company}.pdf"
 ```
 
 ---
@@ -122,7 +122,7 @@ Each report includes: row index, status (`OK`, `ERROR`, `SKIPPED`, `DRY-RUN`), t
 
 ## Troubleshooting & tips
 - **LibreOffice detection**  
-  Run `python Generador_v2.py --check` to verify.  
+  Run `python office-template-batch-pdf.py --check` to verify.  
   If not found, set the path explicitly:
   ```python
   SOFFICE_BIN = r"C:\Program Files\LibreOffice\program\soffice.exe"

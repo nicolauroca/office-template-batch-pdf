@@ -144,8 +144,8 @@ Each report includes: row index, status (`OK`, `ERROR`, `SKIPPED`, `DRY-RUN`), t
 ---
 
 ## Credits
-Created with ❤️ by [Nico](https://github.com/)  
-for automating document and diploma generation in batch mode.
+Created with ❤️ by [Nico](https://nicolauroca.dev/)  
+for automating document generation in batch mode.
 
 ---
 

@@ -13,7 +13,7 @@ Includes preflight (tokens vs columns), token filters, dry-run mode, per-row sub
 - **Token filters & defaults**:  
   `{{Name|trim|upper}}`, `{{Amount|euros}}`, `{{Date|dmy}}`, `{{Field?:N/A}}`
 - **Dry-run** mode: simulate replacements without generating PDFs.
-- **Row-level SKIP** and per-row **CARPETA** (subfolder) support.
+- **Row-level SKIP** and per-row **OUTPUT** (subfolder) support.
 - **JSON and CSV** reports for every batch run.
 - **Export engine**: choose LibreOffice or MS Office (Word / PowerPoint COM on Windows).
 - **Progress bar** using `tqdm` (if installed).
@@ -50,7 +50,7 @@ Includes preflight (tokens vs columns), token filters, dry-run mode, per-row sub
 |-------------|-----------|-------------|
 | `TEMPLATE`  | ✅ | Template filename (e.g. `diploma_base.pptx`) |
 | `SKIP`      | ⛔ | If set to `1`, `true`, `yes`, `si`, etc., the row is skipped |
-| `CARPETA`   | ⛔ | Optional subfolder name for output |
+| `OUTPUT`   | ⛔ | Optional subfolder name for output |
 | others...   | — | All other columns are available as tokens like `{{NOMBRE}}`, `{{EMPRESA}}`, etc. |
 
 ---
